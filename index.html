@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amorim Systems – Soluções Web para Pequenos e Médios Negócios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pzcval7qVqv1LyKG+XSOxOz2vCqG71fBYc5Uli6BjXx2/+qXo0EgOV1+U6bEeMVIjJpq3uyA2VZrD6QdG+YAKw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --brand-dark: #0d1b2a;
+            --brand-blue: #005691;
+            --brand-cyan: #3bb5e8;
+            --brand-light: #e6f7ff;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: "Segoe UI", sans-serif;
+            color: var(--brand-dark);
+            scroll-behavior: smooth;
+            font-size: 1.1rem;
+            /* Espaço para navbar fixa */
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            background: var(--brand-dark);
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--white) !important;
+            margin-right: 1rem;
+        }
+
+        #hero .btn-primary {
+            background: var(--brand-cyan);
+            border: none;
+        }
+
+        section {
+            padding: 6rem 1rem;
+        }
+
+        section.bg-light {
+            background: var(--brand-light);
+        }
+
+        h2 {
+            color: var(--brand-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--brand-cyan);
+            margin-top: .5rem;
+            border-radius: 2px;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--brand-cyan);
+            margin-bottom: 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: .5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        }
+
+        footer {
+            background: var(--brand-dark);
+            color: var(--white);
+            padding: 2rem 1rem;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            /* centraliza verticalmente */
+            justify-content: space-between;
+            /* mantém espaçamento texto ↔ imagem */
+            background-color: var(--brand-dark);
+            background-image: url('img/hero.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: var(--white);
+            padding: 8rem 1rem;
+            height: 90vh;
+        }
+
+        /* Remova o display:flex do .hero-container, se tiver */
+        .hero-container {
+            width: 100%;
+            max-width: 1200px;
+            /* ou o valor que usar */
+            margin: 0 auto;
+            /* sem display:flex aqui */
+        }
+
+        .hero-text {
+            max-width: 50%;
+            text-align: left;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            /* verde WhatsApp */
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 0.25rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            /* espaço entre ícone e texto */
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .btn-whatsapp:hover,
+        .btn-whatsapp:focus {
+            background-color: #128C7E;
+            /* tom mais escuro no hover */
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .btn-whatsapp i {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 4rem 1rem;
+                background: #0d1b2a;
+                height: 60vh;
+            }
+
+            .hero img {
+                width: 10rem;
+                border-radius: 15%;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .desktop {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.jpeg" alt="Amorim Systems">
+            </a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navMenu">☰</button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="#solucoes" class="nav-link">Soluções</a></li>
+                    <li class="nav-item"><a href="#como-funciona" class="nav-link">Como Funciona</a></li>
+                    <li class="nav-item"><a href="#galeria" class="nav-link">Galeria</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     -->
+
+    <!-- Hero -->
+    <section id="hero" class="hero desktop">
+        <div class="container">
+            <h1 class="display-4"> <b>Amorim Systems</b></h1>
+            <p class="lead">Soluções personalizadas que automatizam fluxos de trabalho, <br> reduzem custos e oferecem
+                insights estratégicos em tempo real.</p>
+            <a href="#contato" class="btn btn-primary btn-lg">Falar com um especialista</a>
+        </div>
+    </section>
+
+    <section id="hero" class="hero mobile">
+        <div class="container">
+            <h1 class="display-4"> <b>Amorim Systems</b></h1>
+            <img src="img/hero1.png" style="width: 12rem;" alt="" srcset="">
+            <p class="lead">Soluções personalizadas que automatizam fluxos de trabalho, reduzem custos e oferecem
+                insights estratégicos em tempo real.</p>
+            <a href="#contato" class="btn btn-primary btn-lg">Falar com um especialista</a>
+        </div>
+    </section>
+
+    <!-- Sobre nós -->
+    <section id="sobre">
+        <div class="container">
+            <div class="row align-items-center gx-5">
+                <div class="col-lg-6">
+                    <h2>Quem Somos</h2>
+                    <p>A <b>Amorim Systems</b> oferece soluções tecnológicas para pequenas e médias empresas,
+                        com foco em:</p>
+                    <ul>
+                        <li>Desenvolvimento de sistemas web e aplicativos</li>
+                        <li>Automação de processos administrativos</li>
+                        <li>Design de interfaces intuitivas</li>
+                        <li>Integração com APIs e plataformas terceiras</li>
+                        <li>Experiência sólida em finanças, vendas e logística</li>
+                    </ul>
+                    <p>Nossa missão é simplificar o dia a dia do seu negócio,<br> aumentando produtividade, reduzindo
+                        custos
+                        e gerando resultados reais.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="img/logo.jpeg" alt="Amorim Systems" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center mt-3">
+        <a href="https://wa.me/5551993464223" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp" style="color: #fff;"></i> Conversar no WhatsApp
+        </a>
+    </div>
+
+    <!-- Soluções -->
+    <section id="solucoes" class="bg-light">
+        <div class="container">
+            <h2 class="text-center">Nossas Soluções</h2>
+            <div class="row gy-4">
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">📅</div>
+                    <h5>Controle de Agenda</h5>
+                    <p>Gerencie compromissos de manicures, barbearias, fotógrafos e fisioterapeutas com lembretes
+                        automáticos.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">✅</div>
+                    <h5>Gestor de Tarefas</h5>
+                    <p>Organize projetos, atribua atividades e acompanhe o progresso em tempo real.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">💰</div>
+                    <h5>Controle Financeiro</h5>
+                    <p>Fluxo de caixa, contas a pagar e receber, relatórios e dashboards financeiros.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">📝</div>
+                    <h5>Marketing & Conteúdo</h5>
+                    <p>Planejamento editorial, calendário, aprovação de posts e análise de performance.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">📦</div>
+                    <h5>Estoque & Pedidos</h5>
+                    <p>Cadastro de produtos, controle de estoque e gestão integrada de vendas.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">💻</div>
+                    <h5>Landing Pages</h5>
+                    <p>Criamos páginas responsivas e otimizadas para conversão, 100% integradas ao seu funil de vendas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center mt-3">
+        <a href="https://wa.me/5551993464223" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp" style="color: #fff;"></i> Conversar no WhatsApp
+        </a>
+    </div>
+
+    <!-- Como funciona -->
+    <section id="como-funciona">
+        <div class="container">
+            <h2 class="text-center">Como Funciona</h2>
+            <p>Nossos projetos seguem um processo claro e colaborativo:</p>
+            <ol>
+                <li><strong>Briefing:</strong> Entendimento das suas necessidades e objetivos.</li>
+                <li><strong>Planejamento:</strong> Definição de escopo, prazos e tecnologias.</li>
+                <li><strong>Desenvolvimento:</strong> Criação de interfaces e funcionalidades, com entregas parciais.
+                </li>
+                <li><strong>Testes:</strong> Garantia de qualidade e usabilidade antes do lançamento.</li>
+                <li><strong>Implantação:</strong> Configuração, treinamento e go-live.</li>
+                <li><strong>Suporte:</strong> Atualizações, melhorias e atendimento dedicado.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Galeria
+    <section id="galeria" class="bg-light">
+        <div class="container">
+            <h2 class="text-center">Galeria de Demonstrações</h2>
+            <div class="row g-4 gallery">
+                <div class="col-sm-6 col-lg-4"><img src="demo1.jpg" alt="Demonstração Sistema 1"></div>
+                <div class="col-sm-6 col-lg-4"><img src="demo2.jpg" alt="Demonstração Sistema 2"></div>
+                <div class="col-sm-6 col-lg-4"><img src="demo3.jpg" alt="Demonstração Sistema 3"></div>
+                <div class="col-sm-6 col-lg-4"><img src="demo4.jpg" alt="Demonstração Sistema 4"></div>
+                <div class="col-sm-6 col-lg-4"><img src="demo5.jpg" alt="Demonstração Sistema 5"></div>
+                <div class="col-sm-6 col-lg-4"><img src="demo6.jpg" alt="Demonstração Sistema 6"></div>
+            </div>
+        </div>
+    </section>
+     -->
+
+    <!-- Contato -->
+    <section id="contato">
+        <div class="container">
+            <h2 class="text-center">Fale Conosco</h2>
+            <p class="text-center mb-4">
+                Agende uma conversa para entender como podemos criar a solução para o seu negócio.
+            </p>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-12">
+                            <label for="nome" class="form-label">Seu nome</label>
+                            <input type="text" id="nome" class="form-control" required />
+                        </div>
+                        <div class="col-12">
+                            <label for="telefone" class="form-label">Seu telefone</label>
+                            <input type="tel" id="telefone" class="form-control" required />
+                        </div>
+                        <div class="col-12">
+                            <label for="mensagem" class="form-label">Mensagem</label>
+                            <textarea id="mensagem" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary px-5">Enviar</button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="https://wa.me/5551993464223" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-whatsapp" style="color: #fff;"></i> Conversar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mt-2">&copy; 2025 Amorim Systems. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/271a03c610.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
